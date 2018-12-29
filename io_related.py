@@ -180,3 +180,22 @@ solve(x**2 - 1, x)
 
 # >>> np.dot(A, x) - b
 # array([ 0.,  0.,  0.])
+
+import random
+random.sample(range(1, 100), 3)
+[77, 52, 45]
+
+
+# load and save object using pickle
+
+import pickle
+import numpy as np
+def load_object(filename):
+    if not os.path.exists(filename):
+        return None
+    with open(filename, 'rb') as f:
+        return pickle.load(f)
+
+def save_object(obj, filename):
+    with open(filename, 'wb') as output:  # Overwrites any existing file.
+        pickle.dump(obj, output, pickle.HIGHEST_PROTOCOL)
